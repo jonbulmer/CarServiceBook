@@ -1,0 +1,39 @@
+Start to put together my notes.
+
+
+Simulate database methods
+Module Patten Nodejs
+
+create a get method for the database object.
+Then in the main.js instancate a new task with
+the database object as the params.
+We use a JSon object as the params.
+In the database module create a save method and
+save this the module the when we instancate the
+module we pass the parms as a JSon object
+var Db = new DbModual({'name':'John Smith','registration': 'T8' });
+Inside the DbModule we create
+var db = {};
+Because of the way javasript closures work every db call encasulates db
+into the module and we don't have to wory about database connections in
+our code eles where in the application.
+
+Use the reveling mudule patten
+
+Every time we goto the module in code we can see the methods in the dot
+notation in the API. This modual has a method and nextMethod methods
+
+var Module = function () {
+var privateVar = 'I am private...';
+
+var method = function () {...
+}
+
+var nextMethod = function () {...
+}
+
+return{
+  method: method,
+  nextMethod: nextmethod;
+  }
+}
