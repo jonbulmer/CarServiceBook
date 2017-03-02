@@ -16,3 +16,18 @@ the factory pattern.
 
 So we are pulling in 3 repositories and it is a little bit of a mess.
 
+Now we are going to use the factory pattern to replace lines 2 to 4.
+So a factory repository creates the the repositories for us and we don't have to change 
+main.js every time we add a database or some other function.
+
+We create a repoFactory.js
+
+This is a simple Factory with our repositories in it.
+The function takes a string with the repostory type and then check for the require
+we want and returns our require the the mainSimpleFactory.js
+
+Noe we can return the require from the factory when we call a new serviceBook
+and give use a user or project based on what we are asking for. 
+
+We only have the following require.
+var repoFactory = require('./repoFactory');

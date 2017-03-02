@@ -15,6 +15,7 @@ var repo = function () {
                  + serviceBook.registration + ' to the db');
     }
 
+    console.log('Creating a new car service repo!!!');
     return {
         get: get,
         save: save
