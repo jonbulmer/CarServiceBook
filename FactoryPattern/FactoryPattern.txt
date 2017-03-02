@@ -1,0 +1,18 @@
+Factory Pattern
+
+A pattern used to simplify object creation
+
+Creating different objects based on need.
+
+Repository creation. 
+
+
+To demostrate the factory pattern I am going to add a 
+userRepository.js and a
+projectRepository.js
+
+The first thing we are going to do is run this project th old way with out 
+the factory pattern.
+
+So we are pulling in 3 repositories and it is a little bit of a mess.
+
