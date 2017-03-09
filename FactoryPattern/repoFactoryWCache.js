@@ -3,7 +3,7 @@ var repoFactory =  function () {
     this.getRepo = function (repoType) {
         if (repoType === 'serviceBook') {
             if (this.sbRepo) {
-                console.log('Retrieving from cache');
+                console.log('Retriveving from cache');
                 return this.sbRepo; 
             } else {
                 var sbRepo = require('./carServiceRepository');

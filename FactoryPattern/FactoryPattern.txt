@@ -26,8 +26,20 @@ This is a simple Factory with our repositories in it.
 The function takes a string with the repostory type and then check for the require
 we want and returns our require the the mainSimpleFactory.js
 
-Noe we can return the require from the factory when we call a new serviceBook
+Now we can return the require from the factory when we call a new serviceBook
 and give use a user or project based on what we are asking for. 
 
 We only have the following require.
 var repoFactory = require('./repoFactory');
+
+I added a test to the repoFactory so it will just return sbRepo if it is in 
+cache or go ahead and create the reqiure('./carServiceBook'); if it is not
+on use.
+
+In the next demo I am going to create the require from a list. This can be from a
+file database or any data source. Because we have name in the repos object returned
+from this in the factory from the repos in the forEach loop it can be called like
+this 
+var car1 = new ServiceBook(repoFactory.serviceBook.get(1));
+instead of
+var car2 = new ServiceBook(repoFactory.getRepo('serviceBook').get(1)); 
